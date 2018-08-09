@@ -5,14 +5,45 @@
 # We haven't hard coded the hashes in the tests, 
 #they're dynamically brought in from the NYC Open Data API
 
-# first_recycle_bin =  {
-#   "address"=>"E 227 St/Bronx River Pkway",
-#   "site_type"=>"Subproperty",
-#   "longitude"=>"-73.864223918",
-#   "borough"=>"Bronx",
-#   "latitude"=>"40.890848989",
-#   "park_site_name"=>"227th St. Plgd"
-# }
+first_recycle_bin =  {
+  "address"=>"E 227 St/Bronx River Pkway",
+  "site_type"=>"Subproperty",
+  "longitude"=>"-73.864223918",
+  "borough"=>"Bronx",
+  "latitude"=>"40.890848989",
+  "park_site_name"=>"227th St. Plgd"
+}
+
+def address 
+  puts first_recycle_bin["address"]
+end
+
+
+def borough(first_recycle_bin)
+  puts first_recycle_bin["borough"]
+end
+puts borough(first_recycle_bin)
+
+def all_keys
+first_recycle_bin.each do |keys, values|
+  puts "#{keys}"
+end 
+puts all_keys
+
+def all_data(first_recycle_bin)
+first_recycle_bin.each do |keys, values|
+  puts "#{values}"
+end
+puts all(first_recycle_bin)
+
+def key_and_data(first_recycle_bin)
+puts first_recycle_bin.each do |keys, values|
+  puts "#{keys}, #{values}"
+end
+puts key_and_data(first_recycle_bin)
+
+  
+  
 
 
 #1. Define a method `address`, that takes a hash as an argument.
