@@ -17,18 +17,44 @@
 
 #1. Define a method `address`, that takes a hash as an argument.
 #This method should return the value of the address key in the hash.
+def address
+  puts first_recycle_bin["address"]
+end
 
 #2. Define a method called `borough` that takes a hash as an argument.
+def borough
+  puts first_recycle_bin["borough"]
+end
 # This method should return the value of the borough key in the hash.
 
 #3. Define a method called `all_keys` that takes a hash as an argument.
+def all_keys
+  first_recycle_bin.each do |keys,values|
+   "#{keys}"
+  end 
+end 
+puts first_recycle_bin.keys
+
+
 #This method should print out each key in the hash. 
 #You should use the `each_key` method to iterate over your hash and print out each key.
 
 #4. Define a method called `all_data` that takes a hash as an argument.
+def all_data
+  puts first_recycle_bin.each do |keys,values|
+    "#{values}"
+  end
+end 
+puts first_recycle_bin.values
+
 #This method should print out each value in the hash.
 #You should use the `each_value` method to iterate over your hash and print out each value.
 
 #5. Define a method called `key_and_data` that takes a hash as an argument.
+def key_and_data
+  puts first_recycle_bin.each do |keys,values|
+    "The #{keys} is #{values}"
+  end
+end 
 #This method should print out each key and value in the hash in a sentence like this: `The #{key} is #{value}`
 #You should use the `each` method to iterate over your hash to print out that sentence
